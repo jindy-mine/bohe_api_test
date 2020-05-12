@@ -1,0 +1,75 @@
+2020-03-30 19:08:25,252 -- [test_recharge.py-->line:90] - INFO: 用例--充值成功--执行通过
+2020-03-30 19:08:28,368 -- [test_recharge.py-->line:90] - INFO: 用例--ID为空--执行通过
+2020-03-30 19:08:28,633 -- [test_recharge.py-->line:84] - ERROR: 用例--ID为字符串型--执行未通过
+2020-03-30 19:08:28,634 -- [test_recharge.py-->line:85] - ERROR:  :: 0 != 2
+Traceback (most recent call last):
+  File "D:\Software\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PythonPro\bohe_api_test\testcases\test_recharge.py", line 78, in test_recharge
+    self.assertEqual(res["code"], expected["code"])
+  File "D:\Software\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 0 != 2
+2020-03-30 19:08:34,893 -- [test_recharge.py-->line:90] - INFO: 用例--ID为其他账号--执行通过
+2020-03-30 19:08:38,067 -- [test_recharge.py-->line:90] - INFO: 用例--ID为小数--执行通过
+2020-03-30 19:08:41,659 -- [test_recharge.py-->line:90] - INFO: 用例--金额等于0--执行通过
+2020-03-30 19:08:45,311 -- [test_recharge.py-->line:90] - INFO: 用例--金额为空--执行通过
+2020-03-30 19:08:48,800 -- [test_recharge.py-->line:90] - INFO: 用例--金额等于-1--执行通过
+2020-03-30 19:08:52,383 -- [test_recharge.py-->line:90] - INFO: 用例--金额等于-10--执行通过
+2020-03-30 19:08:56,612 -- [test_recharge.py-->line:90] - INFO: 用例--金额等于500000--执行通过
+2020-03-30 19:09:00,488 -- [test_recharge.py-->line:90] - INFO: 用例--金额等于500000.1--执行通过
+2020-03-30 19:09:04,209 -- [test_recharge.py-->line:90] - INFO: 用例--金额等于200000.23--执行通过
+2020-03-30 19:09:04,474 -- [test_recharge.py-->line:84] - ERROR: 用例--金额等于200000.111--执行未通过
+2020-03-30 19:09:04,474 -- [test_recharge.py-->line:85] - ERROR:  :: 余额小数超过两位 != 金额小数超过两位
+Traceback (most recent call last):
+  File "D:\Software\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '余额小数超过两位' != '金额小数超过两位'
+- 余额小数超过两位
+? ^
++ 金额小数超过两位
+? ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PythonPro\bohe_api_test\testcases\test_recharge.py", line 79, in test_recharge
+    self.assertEqual(res["msg"], expected["msg"])
+  File "D:\Software\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 余额小数超过两位 != 金额小数超过两位
+2020-03-30 19:09:08,159 -- [test_recharge.py-->line:84] - ERROR: 用例--金额为str类型--执行未通过
+2020-03-30 19:09:08,159 -- [test_recharge.py-->line:85] - ERROR:  :: 0 != 2
+Traceback (most recent call last):
+  File "D:\Software\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PythonPro\bohe_api_test\testcases\test_recharge.py", line 78, in test_recharge
+    self.assertEqual(res["code"], expected["code"])
+  File "D:\Software\PyCharm\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 0 != 2
