@@ -4,7 +4,6 @@ Author:薄咊
 Time:2020/3/25  18:57
 ==========================================
 """
-
 import unittest, random
 from common.handle_excel import HandleExcel
 from library.myddt import data, ddt
@@ -19,10 +18,23 @@ from common.handle_dbMysql import HandleMysql
 class RegisterTestCase(unittest.TestCase):
     excel = HandleExcel(CASE_FILENAME, "register")
     cases = excel.read_data()
+
+    """
+     cases = {
+            {"address": "https://www.aliexpress.com/store/3213085", "asstext": "店铺验证成功"},
+            {"address": "https://www.aliexpress.com/store/3213085", "asstext": "店铺添加重复"}
+        }
+    """
     db =HandleMysql()
 
     @data(*cases)
     def test_register(self, case):
+        """
+        case={"address": "https://www.aliexpress.com/store/3213085", "asstext": "店铺验证成功"}
+        :param case:
+        :return:
+        """
+
         # 1、准备用例数据
         # 请求方法
         method = case["method"]
