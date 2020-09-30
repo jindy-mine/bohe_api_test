@@ -10,7 +10,6 @@ from library.HTMLTestRunnerNew import HTMLTestRunner
 from BeautifulReport import BeautifulReport
 from common.handle_logging import log
 from common.handle_path import CASE_DIR, REPORT_DIR, REPORT_FILENAME
-from common.send_email import send_msg
 from testcases import test_loanslist
 log.info("--------------------测试用例开始执行--------------------")
 # 创建测试套件
@@ -36,5 +35,4 @@ runner = HTMLTestRunner(stream=open(REPORT_FILENAME, "wb"),
 runner.run(suite)
 
 log.info("--------------------测试用例执行结束--------------------")
-# 将测试报告邮件发送
-# send_msg()
+

@@ -3,7 +3,6 @@ from common.handle_config import conf
 
 
 class EnvData:
-    aaa='1www'
     pass
 
 
@@ -15,6 +14,7 @@ def replace_data(data):
         # 返回的是一个匹配对象
         # 获取匹配到的数据
         key = res.group()
+        print(key)
         # 获取匹配规则中括号里面的内容
         item = res.group(1)
         try:
@@ -26,7 +26,7 @@ def replace_data(data):
         data = data.replace(key, value)
     return data
 
-
-data = '{"user":#user#,"pwd":#pwd#,"name":"#name#","age":"#age#","aaa":"#aaa#"}'
-res = replace_data(data)
-print(res)
+if __name__ == '__main__':
+    data = '{"user":#user#,"pwd":#pwd#,"name":"#name#","age":"#age#"}'
+    res = replace_data(data)
+    print(res)
